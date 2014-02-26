@@ -1,0 +1,30 @@
+<template name="brewsItem">
+  <div class="beer">
+    <div class="bottle-cap">
+      <img src="/images/bottle-cap.png" alt="Bottle Cap" />
+      <div class="beer-label {{color}}">
+        <h4>{{code}}</h4>
+      </div>
+    </div>
+    <h3>{{name}}</h3>
+    <span class="rating">
+      <span class="star"></span>
+      <span class="star"></span>
+      <span class="star"></span>
+      <span class="star"></span>
+      <span class="star"></span>
+    </span>
+    <dl>
+      <dt>Brew date:</dt>
+      <dd>{{formattedBrewDate}}</dd>
+      <dt>Brew type:</dt>
+      <dd>{{type}}</dd>
+      <dt>ABV:</dt>
+      <dd>{{abvPercentage}}</dd>
+    </dl>
+    <h5>Tasting notes</h5>
+    <p>
+      {{#markdown}}{{tasting}}{{/markdown}}
+    </p>
+  </div>
+</template>

@@ -10,3 +10,5 @@ preserve-inputs
 iron-router
 less
 font-awesome
+marked
+moment
