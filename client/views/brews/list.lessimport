@@ -1,0 +1,172 @@
+// Place all the styles related to the main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Fonts
+@import url(http://fonts.googleapis.com/css?family=Permanent+Marker|PT+Sans+Narrow:400,700);
+
+// Layout
+html {
+  height: 100%;
+  font-size: 62.5%;
+}
+
+body {
+  background: #f1f1f2;
+  color: #404041;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 1.6rem;
+}
+
+#wrapper {
+  max-width: 960px;
+  margin: 50px auto;
+}
+
+#footer {
+  max-width: 960px;
+  height: 80px;
+  clear: both;
+  > p {
+    margin: 30px auto;
+    width: 100px;
+  }
+}
+
+// Fonts
+h1, h2, h3 {
+  font-family: Futura, sans-serif;
+}
+
+h1 {
+  font-size: 3.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 10px;
+  border-bottom: solid 1px #404041;
+  width: 335px;
+  margin: 0 auto;
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.4rem;
+  margin: 15px 0 30px;
+  text-align: center;
+}
+
+h3 {
+  margin: 20px 0 10px;
+  font-size: 1.8rem;
+}
+
+h4 {
+  font-family: 'Permanent Marker', cursive;
+  text-transform: uppercase;
+  text-align: center;
+  color: black;
+  font-size: 4.8rem;
+  line-height: 115px;
+}
+
+h5 {
+  font-weight: 700;
+  margin: 10px 0 -10px 0;
+}
+
+p {
+  margin: 10px 0;
+//  clear: both;
+}
+
+dl {
+  margin-top: 10px;
+  display: inline-block;
+}
+
+dt, dd {
+  float: left;
+}
+
+dt {
+  font-weight: 700;
+  clear: left;
+  width: 80px;
+}
+
+dd {
+}
+
+#beer-wrapper {
+  margin: 70px 0;
+}
+
+.beer {
+  width: 203px;
+  float: left;
+  margin-right: 48px;
+  margin-bottom: 30px;
+  &:last-child {
+    margin-right: 0;
+  }
+  img {
+    position: absolute;
+    width: 203px;
+    height: 203px;
+  }
+}
+
+.beer-label {
+  width: 120px;
+  height: 120px;
+  margin: 43px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  &.green {
+    background: #0fa14a;
+  }
+  &.blue {
+    background: #1b75bb;
+  }
+  &.yellow {
+    background: #f9ec31;
+  }
+  &.red {
+    background: #da1f26;
+  }
+}
+
+.bottle-cap {
+  height: 203px;
+  width: 203px;
+  margin: 0 auto;
+}
+
+.rating {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    font-size: 3.0rem;
+    & span.star {
+      font-family: FontAwesome;
+      font-weight: normal;
+      font-style: normal;
+      display: inline-block;
+      &:hover {
+        cursor: pointer;
+      }
+      &:before {
+        content: "\f006";
+        padding-right: 5px;
+        color: #999;
+      }
+    }
+}
+
+.rating span.star:hover:before, .rating span.star:hover~span.star:before {
+    content: "\f005";
+    color: #e3cf7a
+}
