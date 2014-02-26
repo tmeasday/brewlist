@@ -4,4 +4,5 @@ Router.configure({
 
 Router.map(function() {
   this.route('brewsList', {path: '/'})
+  this.route('brewsNew', {path: '/new'})
 });
