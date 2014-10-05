@@ -1,0 +1,28 @@
+<template name="brewsForm">
+  <label for="name">Name</label>
+  <input type="text" name="name" value="{{name}}"/>
+  
+  <label for="code">Code</label>
+  <input type="text" name="code" value="{{code}}" />
+
+  <label for="brewedAt">Brewed At</label>
+  {{> datepicker value=brewedAt name='brewedAt'}}
+
+  <label for="readyAt">Bottled At</label>
+  {{> datepicker value=bottledAt name='bottledAt'}}
+  
+  <label for="readyAt">Ready At</label>
+  {{> datepicker value=readyAt name='readyAt'}}
+  
+  <label for="type">Type</label>
+  <input type="text" name="type" value="{{type}}"/>
+  
+  <label for="abv">ABV</label>
+  <input type="text" name="abv" value="{{abv}}"/>
+  
+  <label for="recipeUrl">Recipe</label>
+  <input type="url" name="recipeUrl" value="{{recipeUrl}}"/>
+  
+  <label for="notes">Notes</label>
+  <textarea name="notes">{{notes}}</textarea>
+</template>

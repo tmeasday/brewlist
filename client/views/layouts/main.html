@@ -1,6 +1,7 @@
 <template name="layout">
   <div id="wrapper">
-    <h1>Funky Brewsters</h1>
+    {{> loginButtons}}
+    <h1><a href="{{pathFor 'brewsList'}}">Funky Brewsters</a></h1>
     <h2>a simple beer guide...</h2>
     <div class="line"></div>
     {{> yield }}

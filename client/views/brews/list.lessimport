@@ -110,6 +110,9 @@ dd {
   &:last-child {
     margin-right: 0;
   }
+  h3 {
+    white-space: nowrap;
+  }
   img {
     position: absolute;
     width: 203px;
@@ -144,29 +147,4 @@ dd {
   height: 203px;
   width: 203px;
   margin: 0 auto;
-}
-
-.rating {
-    unicode-bidi: bidi-override;
-    direction: rtl;
-    font-size: 3.0rem;
-    & span.star {
-      font-family: FontAwesome;
-      font-weight: normal;
-      font-style: normal;
-      display: inline-block;
-      &:hover {
-        cursor: pointer;
-      }
-      &:before {
-        content: "\f006";
-        padding-right: 5px;
-        color: #999;
-      }
-    }
-}
-
-.rating span.star:hover:before, .rating span.star:hover~span.star:before {
-    content: "\f005";
-    color: #e3cf7a
 }

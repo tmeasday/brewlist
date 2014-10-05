@@ -6,10 +6,14 @@
 standard-app-packages
 autopublish
 insecure
-iron:router
+iron:router@1.0.0-pre3
 less
 natestrauser:font-awesome
 mrt:moment
 chuangbo:marked
 aldeed:simple-schema
+accounts-password
+accounts-ui
+dburles:collection-helpers
+mrt:jquery-ui
 

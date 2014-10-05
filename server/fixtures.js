@@ -1,16 +1,3 @@
-BrewSchema = new SimpleSchema({
-  code: { type: String },
-  name: { type: String },
-  brewedAt: { type: Date },
-  readyAt: { type: Date, optional: true },
-  type: { type: String },
-  abv: { type: Number, decimal: true },
-  notes: { type: String, optional: true },
-  recipeUrl: { type: String, optional: true },
-  averageStars: { type: Number, decimal: true }
-})
-
-Brews = new Mongo.Collection('brews');
 
 if (Brews.find().count() === 0 && Meteor.isServer) {
   _.each([
@@ -47,7 +34,7 @@ if (Brews.find().count() === 0 && Meteor.isServer) {
       notes: "A refreshing apple cider shaken up with black current and rare desert limes from the Aussie Outback.\n\nThis thirst quenching, ‘hot weather’ drink also features a punch of tropical fruit bursting through the back of the palate. Drink it straight up or over ice in a long glass."
     },   
   ], function(brew) {
-    brew.averageStars = 0;
+    brew.averageStars = -1;
     
     check(brew, BrewSchema);
     Brews.insert(brew);

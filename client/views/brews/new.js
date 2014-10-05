@@ -1,11 +1,11 @@
 Template.brewsNew.events({
   'submit': function(e, template) {
-    var brew = {
-      name: template.find('[name=name]').value,
-      code: template.find('[name=code]').value
-    }
+    e.preventDefault();
     
-    Brews.insert(brew);
-    Router.go('brewsList');
+    var brew = readBrew(template)
+ 
+    check(brew, BrewSchema);
+    brew._id = Brews.insert(brew);
+    Router.go('brewsShow', brew);
   }
 });

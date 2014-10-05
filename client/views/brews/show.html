@@ -1,0 +1,51 @@
+<template name="brewsShow">
+  <div class="beer">
+    <div class="bottle-cap">
+      <img src="/images/bottle-cap.png" alt="Bottle Cap" />
+      <div class="beer-label {{color}}">
+        <h4>{{code}}</h4>
+      </div>
+    </div>
+    <h3>{{name}}</h3>
+    <span class="rating no-hover">
+      {{> stars averageStars}}
+    </span>
+    <dl>
+      <dt>Brew date:</dt>
+      <dd>{{formatDate brewedAt}}</dd>
+      {{#if readyAt}}
+        <dt>Ready:</dt>
+        <dd>{{formatDate readyAt}}</dd>
+      {{/if}}
+      <dt>Brew type:</dt>
+      <dd>{{type}}</dd>
+      <dt>ABV:</dt>
+      <dd>{{abvPercentage}}</dd>
+    </dl>
+    {{#if recipeUrl}}
+      <h5><a href="{{recipeUrl}}">Recipe</a></h5>
+    {{/if}}
+    <h5>Brew Notes</h5>
+    <p>
+      {{#markdown}}{{tasting}}{{/markdown}}
+    </p>
+    
+    {{#if currentUser}}
+      {{#with myRating}}
+        <form id="rating-notes">
+          <h3>Your Rating</h3>
+          <span class="rating js-my-rating">
+            {{> stars stars}}
+          </span>
+    
+          <h3>Your Notes (optional)</h3>
+          <textarea name="notes" placeholder="Add notes">{{notes}}</textarea>
+        
+          <button type="submit">Save</button>
+        </form>
+      {{/with}}
+    {{/if}}
+    
+    <a href="{{pathFor 'brewsEdit'}}">Edit</a>
+  </div>
+</template>
